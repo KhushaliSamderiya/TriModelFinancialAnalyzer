@@ -1,29 +1,38 @@
-📊 TriModelFinancialAnalyzer
-An integrated machine learning system that predicts Buy or Sell stock recommendations using insights from fundamental analysis, technical indicators, and sentiment analysis — then combines them using a voting system.
+# 📊 TriModelFinancialAnalyzer
 
-Domains: Finance, NLP, Time Series
-Models Used: BERT (Transformer), SVM (Scikit-learn)
-Data Sources: Yahoo Finance, Financial News
+An integrated machine learning system that predicts **Buy** or **Sell** stock recommendations using insights from **fundamental analysis**, **technical indicators**, and **sentiment analysis** — then combines them using a **voting system**.
 
-🧠 Project Structure
-bash
-Copy
-Edit
+> **Domains:** Finance, NLP, Time Series  
+> **Models Used:** BERT (Transformer), SVM (Scikit-learn)  
+> **Data Sources:** Yahoo Finance, Financial News
+
+---
+
+## 🧠 Project Structure
+
 TriModelFinancialAnalyzer/
 ├── analyzers/
-│   ├── fundamental_analysis/
-│   ├── technical_analysis/
-│   └── sentimental_analysis/
+│ ├── fundamental_analysis/
+│ ├── technical_analysis/
+│ └── sentimental_analysis/
 ├── scripts/
 └── README.md
-Each analyzer has its own pipeline for data processing, training, and testing. The scripts/ folder integrates all models into a decision-making system.
 
-🧭 Full Pipeline Overview
-🔹 Step 1: Generate Datasets
-1.1 Fundamentals (Financial Ratios + Risk)
-bash
+yaml
 Copy
 Edit
+
+Each analyzer has its own pipeline for data processing, training, and testing. The `scripts/` folder integrates all models into a decision-making system.
+
+---
+
+## 🧭 Full Pipeline Overview
+
+### 🔹 Step 1: Generate Datasets
+
+#### **1.1 Fundamentals (Financial Ratios + Risk)**
+
+```bash
 python analyzers/fundamental_analysis/data/ver_2/scripts/preprocess_fundamentals.py \
     --start_date 2018-01-01 \
     --end_date 2023-12-31 \
@@ -162,17 +171,6 @@ Modular & Extensible: Each pipeline is cleanly separated but integratable
 
 Voting Logic: Emulates ensemble decision making for robustness
 
-💡 Final Thoughts
-Each domain contributes unique insights:
-
-Fundamental = Intrinsic financial health
-
-Sentiment = Market perception
-
-Technical = Price movement trends
-
-Together, they create a more holistic and reliable stock prediction engine.
-
 ✅ Recommended Run Order
 bash
 Copy
@@ -196,3 +194,12 @@ inference_final.py
 
 # 5. Evaluation
 metrics_integrate.py
+Let’s build smarter stock strategies — across data, domains, and models.
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you want this adapted for `README.md` formatting in a specific platform (like GitHub or GitLab).
